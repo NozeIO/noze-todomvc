@@ -1,0 +1,16 @@
+version: '2'
+services:
+  todo-mvc:
+    build: .
+    ports:
+      - "1337:1337"
+    environment:
+      REDIS_HOST: redis
+      TODO_MVC_BACKEND: redis
+    depends_on: 
+      - redis
+    restart: always
+
+  redis:
+    image: redis:3.2
+
