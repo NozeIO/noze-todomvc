@@ -11,6 +11,7 @@ import http
 import console
 import connect
 import express
+import process
 import Freddy
 import redis
 
@@ -45,8 +46,8 @@ app.get("/*") { req, _, next in
 
 // MARK: - Storage
 
-// let todos = InMemoryCollectionStore<Todo>()
-let todos = RedisCollectionStore<Todo>(redis.createClient())
+let redisHost = process.env["REDIS_HOST"] ?? "localhost"
+let todos = RedisCollectionStore<Todo>(redis.createClient(host: redisHost))
 
 // MARK: - Routes & Handlers
 
