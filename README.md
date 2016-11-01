@@ -17,6 +17,46 @@ and
 [Redis](https://github.com/NozeIO/Noze.io/blob/master/Sources/redis/README.md)
 modules.
 
+The example is coming with two backends: a simple in-memory store as well as a
+Redis backend which persists the todos as Redis hashes and uses Redis INCR to
+maintain a primary key sequence.
+
+<center><img src="http://noze.io/images/screenshot-todo-mvc-redis-1.jpeg" alt="" 
+             style="border: 1px solid #DADADA; padding: 4px;"/></center>
+
+Check it out! It actually works :-)
+
+### Building and running the example
+
+You can just checkout the repository and build via Swift Package Manager
+
+    git clone https://github.com/NozeIO/noze-todomvc.git
+    cd noze-todomvc
+    swift build # or just `make`
+
+If you have Redis installed locally, you can just run the example via
+
+    helge@ZeaPro noze-todomvc (develop)*$ .build/debug/todo-mvc
+    Server listening: <Server: #http=0  *.*.*.*:1337 fd=4 backlog=5>
+    INFO: Connected to Redis <RedisClient: Connected 7 idle>
+
+and connect to it via
+[http://todobackend.com/client/index.html?http://localhost:1337/](http://todobackend.com/client/index.html?http://localhost:1337/).
+
+### Running in Docker
+
+Also included is a Docker configuration which starts Redis and everything
+required. To run:
+
+    docker-compose-up
+
+and again, connect to it via
+[http://todobackend.com/client/index.html?http://localhost:1337/](http://todobackend.com/client/index.html?http://localhost:1337/).
+
+### Running the TodoBackend.com Testsuite
+
+Just connect via:
+[http://todobackend.com/specs/index.html?http://localhost:1337/](http://todobackend.com/specs/index.html?http://localhost:1337/).
 
 ### About Noze.io
 
