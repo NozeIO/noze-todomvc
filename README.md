@@ -6,7 +6,7 @@
 ![Swift3](https://img.shields.io/badge/swift-3-blue.svg)
 ![macOS](https://img.shields.io/badge/os-macOS-green.svg?style=flat)
 ![tuxOS](https://img.shields.io/badge/os-tuxOS-green.svg?style=flat)
-![Travis](https://api.travis-ci.org/NozeIO/noze-todomvc.svg?branch=develop&style=flat)
+![Travis](https://api.travis-ci.org/NozeIO/noze-todomvc.svg?branch=master&style=flat)
 
 Noze.io TodoMVC is a simple [Todo-Backend](http://todobackend.com)
 example implementation.
