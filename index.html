@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Noze.io Todo MVC by NozeIO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Noze.io Todo MVC</h1>
+      <h2 class="project-tagline">Noze.io: Simple Connect + Redis based TodoMVC backend implementation</h2>
+      <a href="https://github.com/NozeIO/noze-todomvc" class="btn">View on GitHub</a>
+      <a href="https://github.com/NozeIO/noze-todomvc/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/NozeIO/noze-todomvc/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h2>
+<a id="nozeio-todo-mvc-backend-example--" class="anchor" href="#nozeio-todo-mvc-backend-example--" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Noze.io Todo MVC Backend Example
+  <img src="https://pbs.twimg.com/profile_images/725354235056017409/poiNAOlB_400x400.jpg" align="right">
+</h2>
+
+<p><img src="https://img.shields.io/badge/swift-3-blue.svg" alt="Swift3">
+<img src="https://img.shields.io/badge/os-macOS-green.svg?style=flat" alt="macOS">
+<img src="https://img.shields.io/badge/os-tuxOS-green.svg?style=flat" alt="tuxOS">
+<img src="https://api.travis-ci.org/NozeIO/noze-todomvc.svg?branch=master&amp;style=flat" alt="Travis"></p>
+
+<p>Noze.io TodoMVC is a simple <a href="http://todobackend.com">Todo-Backend</a>
+example implementation.</p>
+
+<p>It uses the Noze.io 
+<a href="https://github.com/NozeIO/Noze.io/blob/master/Sources/connect/README.md">Connect</a>
+and
+<a href="https://github.com/NozeIO/Noze.io/blob/master/Sources/redis/README.md">Redis</a>
+modules.</p>
+
+<p>The example is coming with two backends: a simple in-memory store as well as a
+Redis backend which persists the todos as Redis hashes and uses Redis INCR to
+maintain a primary key sequence.</p>
+
+<p></p><img src="http://noze.io/images/screenshot-todo-mvc-redis-1.jpeg" alt="">
+
+<p>Check it out! It actually works :-)</p>
+
+<h3>
+<a id="building-and-running-the-example" class="anchor" href="#building-and-running-the-example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Building and running the example</h3>
+
+<p>You can just checkout the repository and build via Swift Package Manager</p>
+
+<pre><code>git clone https://github.com/NozeIO/noze-todomvc.git
+cd noze-todomvc
+swift build # or just `make`
+</code></pre>
+
+<p>If you have Redis installed locally, you can then run the example via</p>
+
+<pre><code>helge@ZeaPro noze-todomvc (develop)*$ .build/debug/todo-mvc
+Server listening: &lt;Server: #http=0  *.*.*.*:1337 fd=4 backlog=5&gt;
+INFO: Connected to Redis &lt;RedisClient: Connected 7 idle&gt;
+</code></pre>
+
+<p>and connect to it via
+<a href="http://todobackend.com/client/index.html?http://localhost:1337/">http://todobackend.com/client/index.html?http://localhost:1337/</a>.</p>
+
+<h3>
+<a id="running-in-docker" class="anchor" href="#running-in-docker" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Running in Docker</h3>
+
+<p>Also included is a Docker configuration which starts Redis and everything
+required. To run:</p>
+
+<pre><code>docker-compose-up
+</code></pre>
+
+<p>and again, connect to it via
+<a href="http://todobackend.com/client/index.html?http://localhost:1337/">http://todobackend.com/client/index.html?http://localhost:1337/</a>.</p>
+
+<h3>
+<a id="running-the-todobackendcom-testsuite" class="anchor" href="#running-the-todobackendcom-testsuite" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Running the TodoBackend.com Testsuite</h3>
+
+<p>Just connect via:
+<a href="http://todobackend.com/specs/index.html?http://localhost:1337/">http://todobackend.com/specs/index.html?http://localhost:1337/</a>.</p>
+
+<h3>
+<a id="about-nozeio" class="anchor" href="#about-nozeio" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About Noze.io</h3>
+
+<p><a href="http://noze.io/"><strong>Noze.io</strong></a> 
+is an attempt to carry over the <a href="http://nodejs.org/">Node.js</a>
+ideas into <em>pure</em> <a href="http://swift.org">Swift</a>.
+<a href="http://noze.io/"><strong>Noze.io</strong></a> 
+is built around type-safe back-pressure aware pull-streams
+(using Swift generics)
+operating on batches of items. Instead of just operating on bytes,
+operate on batches of Unicode lines or database records or HTML
+responses or - you get the idea.
+Be efficient: Stream everything and ßatch.</p>
+
+<h3>
+<a id="who" class="anchor" href="#who" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Who</h3>
+
+<p>Noze.io is brought to you by
+<a href="http://www.alwaysrightinstitute.com">The Always Right Institute</a>
+and
+<a href="http://zeezide.de">ZeeZide</a>.
+We wouldn't be sad if more people would like to join the effort :-)</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/NozeIO/noze-todomvc">Noze.io Todo MVC</a> is maintained by <a href="https://github.com/NozeIO">NozeIO</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
