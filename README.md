@@ -34,7 +34,7 @@ You can just checkout the repository and build via Swift Package Manager
     cd noze-todomvc
     swift build # or just `make`
 
-If you have Redis installed locally, you can just run the example via
+If you have Redis installed locally, you can then run the example via
 
     helge@ZeaPro noze-todomvc (develop)*$ .build/debug/todo-mvc
     Server listening: <Server: #http=0  *.*.*.*:1337 fd=4 backlog=5>
