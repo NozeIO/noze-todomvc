@@ -48,7 +48,7 @@ and connect to it via
 Also included is a Docker configuration which starts Redis and everything
 required. To run:
 
-    docker-compose-up
+    docker-compose up
 
 and again, connect to it via
 [http://todobackend.com/client/index.html?http://localhost:1337/](http://todobackend.com/client/index.html?http://localhost:1337/).
